@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="scripts/index.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coleta de Dados</title>
+</head>
+<body>
+    <form method="POST" name="form1" id="form1">
+        <h3>COLETA DE DADOS</h3>
+        <p>Nome: </p>
+        <input type="text" id="nome" required maxlength="50">
+        <p>data de nascimento:</p>   
+        <input type="date" id="date" required>
+        <p>Rua:</p>
+        <input type="text" id="rua" required >
+        <p>Bairro:</p>
+        <input type="text" id="bairro" required>
+        <p>Estado: </p>
+            <select name="estados-brasil" id="estados-brasil" onchange="update()" required>
+                <option value="" disabled="" selected="">Selecione um Estado</option>
+                <option value="AC">Acre</option>
+                <option value="AL">Alagoas</option>
+                <option value="AP">Amapá</option>
+                <option value="AM">Amazonas</option>
+                <option value="BA">Bahia</option>
+                <option value="CE">Ceará</option>
+                <option value="DF">Distrito Federal</option>
+                <option value="ES">Espírito Santo</option>
+                <option value="GO">Goiás</option>
+                <option value="MA">Maranhão</option>
+                <option value="MT">Mato Grosso</option>
+                <option value="MS">Mato Grosso do Sul</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="PA">Pará</option>
+                <option value="PB">Paraíba</option>
+                <option value="PR">Paraná</option>
+                <option value="PE">Pernambuco</option>
+                <option value="PI">Piauí</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="RN">Rio Grande do Norte</option>
+                <option value="RS">Rio Grande do Sul</option>
+                <option value="RO">Rondônia</option>
+                <option value="RR">Roraima</option>
+                <option value="SC">Santa Catarina</option>
+                <option value="SP">São Paulo</option>
+                <option value="SE">Sergipe</option>
+                <option value="TO">Tocantins</option>
+            </select>
+            <p>Cidade: </p>
+            <select name="cidade-estado" id="cidade-estado" required>
+                <option value="" disabled="" selected="">Selecione um Municipio</option>
+            </select>
+            <p>País:</p>
+            <select name="pais" id="pais" required>
+                <option value="Br">Brasil</option>
+            </select>
+            <input type="submit" name="enviar" id="enviar" value="Enviar" onclick="eatFood();">
+    </form>
+</body>
+</html>
